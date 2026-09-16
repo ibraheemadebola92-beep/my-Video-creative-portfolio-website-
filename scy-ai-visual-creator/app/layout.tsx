@@ -1,33 +1,61 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import type { Metadata } from "next";
+import "./globals.css";
+import { ThemeProvider } from "../components/ThemeProvider";
+import ThemeToggle from "../components/ui/ThemeToggle";
 
 export const metadata: Metadata = {
-  title: 'SCY AI Visual Creator',
-  description: 'Professional AI-powered visual content creation',
+  title: "Ibrahim Adebola | AI Visual Creator & Creative Director",
+  description:
+    "AI Visual Creator and Creative Director creating cinematic visuals, digital experiences, and AI-powered creative content.",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-slate-900 text-white">
-        <nav className="border-b border-slate-700 bg-slate-800/50 backdrop-blur">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              SCY Creator
+      <body>
+        <ThemeProvider>
+          <header className="fixed top-0 z-50 w-full border-b border-black/10 bg-white/80 backdrop-blur-xl dark:border-white/10 dark:bg-black/80">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+              <a
+                href="/"
+                className="text-sm font-bold tracking-[0.2em] text-black dark:text-white"
+              >
+                SCY
+              </a>
+
+              <div className="flex items-center gap-4">
+                <nav className="hidden items-center gap-6 text-sm md:flex">
+                  <a
+                    href="/#work"
+                    className="transition-opacity hover:opacity-60"
+                  >
+                    Work
+                  </a>
+                  <a
+                    href="/#about"
+                    className="transition-opacity hover:opacity-60"
+                  >
+                    About
+                  </a>
+                  <a
+                    href="/#contact"
+                    className="transition-opacity hover:opacity-60"
+                  >
+                    Contact
+                  </a>
+                </nav>
+
+                <ThemeToggle />
+              </div>
             </div>
-            <div className="flex gap-6 items-center">
-              <a href="/" className="hover:text-blue-400 transition">Home</a>
-              <a href="/studio" className="hover:text-blue-400 transition">Studio</a>
-              <ThemeToggle />
-            </div>
-          </div>
-        </nav>
-        {children}
+          </header>
+
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
