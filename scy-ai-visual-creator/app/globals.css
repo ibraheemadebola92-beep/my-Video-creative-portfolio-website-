@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 15 23% 42%;
+  --foreground: 0 0% 100%;
+  --card: 217 33% 17%;
+  --card-foreground: 0 0% 100%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 217 100% 97%;
+  --secondary: 280 85% 67%;
+  --secondary-foreground: 280 20% 20%;
+}
+
+body {
+  background-color: rgb(15, 23, 42);
+  color: rgb(255, 255, 255);
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent;
+}
