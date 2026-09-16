@@ -1,28 +1,37 @@
 {
   "name": "scy-ai-visual-creator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "sanity:build": "cd sanity && npm run build"
+    "start": "next start"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "next": "^14.0.0",
-    "@sanity/client": "^6.0.0",
-    "@sanity/image-url": "^1.0.0",
-    "tailwindcss": "^3.3.0",
-    "clsx": "^2.0.0"
+    "@portabletext/react": "^3.2.1",
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^8.17.10",
+    "@sanity/icons": "^3.7.0",
+    "@sanity/image-url": "^1.1.0",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.468.0",
+    "next": "^14.2.35",
+    "next-sanity": "^11.5.0",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^4.10.0",
+    "three": "^0.180.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/react": "^18.2.0",
-    "@types/node": "^20.0.0",
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.0"
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.180.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3"
   }
 }
